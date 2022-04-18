@@ -1,12 +1,14 @@
 import React, {useRef, useState} from 'react'
 import useInput from '../UseInput/index.jsx'
+import useColors from '../ColorProvider'
 
-const AddColorForm = ({onNewColor = f => f}) => {
+const AddColorForm = () => {
 
     const [txtTitle, setTxtTitle] = useInput('')
     const [hexColor, setHexColor] = useInput('#000000')
     //const txtTitle = useRef(); //ссылка на текстовое поле
     //const hexColor = useRef(); // ссылка на 16-ый код
+    const {onNewColor} = useColors();
 
     const submit = e => {
         e.preventDefault();

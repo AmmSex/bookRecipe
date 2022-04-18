@@ -6,14 +6,14 @@ import StarRating from './StarRating'
 import ColorList from './ColorList'
 import { v4 } from "uuid";
 
-function App({color_data}) {
-  const [colors, setColors] = useState(color_data);
+function App() {
+  //const [colors, setColors] = useState(color_data);
  
   return (
     <div className="App">
       {/* <Menu recipes={data}  title="Menu"/> */}
       {/* <StarRating  style={{ backgroundColor: "lightblue" }} onDoubleClick={() => alert('doooouble')}/> */}
-      <ColorList colors={colors}
+      {/* <ColorList colors={colors}
         onRemoveColor={id => {
             const newColors = colors.filter(color => color.id !== id)
             setColors(newColors)
@@ -36,7 +36,11 @@ function App({color_data}) {
           ];
           setColors(addNewColor)
         }}
-      />
+      /> */}
+      
+      <ColorList />
+      <AddColorForm />
+
     </div>
   );
 }
